@@ -9,8 +9,8 @@ public class LinkList {
 	
 	public void insertFirst(long value) {
 		Node node = new Node(value);
-		node.next = first;
-		first = node;
+		node.next = first;						//最后插入的放在链表的头部
+		first = node;							//新插入的结点设为头结点
 	}
 	
 	public Node deleteFirst() {
