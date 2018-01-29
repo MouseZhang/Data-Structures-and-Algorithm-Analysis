@@ -16,7 +16,7 @@ public class TestLinkList {
 		
 		Node node = linkList.find(23);
 		node.display();
-		
+		System.out.println();
 		Node node1 = linkList.delete(0);
 		node1.display();
 		System.out.println();
