@@ -1,5 +1,9 @@
 package CH02;
-
+/**
+ * 冒泡排序
+ * @author MouseZhang
+ *
+ */
 public class BubbleSort {
 	public static void sort(long[] arr) {
 		long temp = 0;
