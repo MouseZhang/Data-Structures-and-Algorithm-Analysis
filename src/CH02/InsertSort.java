@@ -1,5 +1,9 @@
 package CH02;
-
+/**
+ * 插入排序
+ * @author MouseZhang
+ *
+ */
 public class InsertSort {
 	public static void sort(long[] arr) {
 		long temp = 0;
