@@ -1,5 +1,9 @@
 package CH02;
-
+/**
+ * 选择排序
+ * @author MouseZhang
+ *
+ */
 public class SelectionSort {
 	public static void sort(long[] arr) {
 		int k = 0;
