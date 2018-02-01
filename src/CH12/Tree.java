@@ -107,6 +107,10 @@ public class Tree {
 		}
 	}
 	
+	/**
+	 * 后序遍历
+	 * @param localNode
+	 */
 	public void afterOrder(Node localNode) {
 		if (localNode != null) {
 			// 后序遍历左子树
