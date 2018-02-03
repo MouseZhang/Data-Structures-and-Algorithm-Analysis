@@ -160,7 +160,7 @@ public class Tree {
 			successorParent.leftChild = successor.rightChild;
 			successor.rightChild = delNode.rightChild;
 		}
-		return successor;
+		return successor;										// 返回中序后继节点
 	}
 	
 	/**
