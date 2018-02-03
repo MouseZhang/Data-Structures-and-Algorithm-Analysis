@@ -1,6 +1,10 @@
 package CH17;
 import java.math.BigInteger;
-
+/**
+ * 链地址法
+ * @author MouseZhang
+ *
+ */
 public class HashTable {
 	private LinkList[] arr;
 	
