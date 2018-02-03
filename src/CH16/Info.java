@@ -29,5 +29,4 @@ public class Info {
 		this.name = name;
 	}
 	
-	
 }

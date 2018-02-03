@@ -15,5 +15,4 @@ public class TestHashTable {
 		ht.delete("b");
 		System.out.println(ht.find("b").getName());
 	}
-
 }

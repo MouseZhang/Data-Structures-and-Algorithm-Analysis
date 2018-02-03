@@ -1,6 +1,10 @@
 package CH16;
 import java.math.BigInteger;
-
+/**
+ * 开放地址法
+ * @author MouseZhang
+ *
+ */
 public class HashTable {
 	private Info[] arr;
 	
