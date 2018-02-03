@@ -74,6 +74,7 @@ public class HashTable {
 		}
 		return null;
 	}
+	
 	public int hashCode(String key) {
 		BigInteger hashVal = new BigInteger("0");
 		BigInteger pow27 = new BigInteger("1");
