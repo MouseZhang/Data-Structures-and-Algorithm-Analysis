@@ -16,4 +16,5 @@ public class Node {
 	public Node(long data) {
 		this.data = data;
 	}
+	
 }
