@@ -10,7 +10,7 @@ public class Graph {
 	//邻接矩阵 
 	private int[][] adjMat;
 	//顶点的最大数目
-	private int maxSize;
+	private int maxSize = 20;
 	//当前顶点
 	private int nVertex;
 	
