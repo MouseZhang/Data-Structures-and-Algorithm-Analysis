@@ -2,6 +2,7 @@ package CH01;
 
 public class MyOrderArray {
 	private long[] arr;
+	//表示有效数据的长度
 	private int elements;
 	
 	public MyOrderArray() {
@@ -12,6 +13,10 @@ public class MyOrderArray {
 		arr = new long[maxSize];
 	}
 	
+	/**
+	 * 添加数据
+	 * @param value
+	 */
 	public void insert(long value) {
 		int i;
 		for (i = 0; i < elements; i++) {
@@ -27,6 +32,9 @@ public class MyOrderArray {
 		elements++;
 	}
 	
+	/**
+	 * 显示数据
+	 */
 	public void display() {
 		System.out.print("[");
 		for (int i = 0; i < elements; i++) {
@@ -35,6 +43,11 @@ public class MyOrderArray {
 		System.out.println("]");
 	}
 	
+	/**
+	 * 查找数据
+	 * @param value
+	 * @return
+	 */
 	public int search(long value) {
 		int i;
 		for (i = 0; i < elements; i++) {
@@ -51,6 +64,11 @@ public class MyOrderArray {
 		}
 	}
 
+	/**
+	 * 二分法查找数据
+	 * @param value
+	 * @return
+	 */
 	public int binarySearch(long value) {
 		int middle = 0;
 		int low = 0;
@@ -75,6 +93,24 @@ public class MyOrderArray {
 		}
 	}
 	
+	/**
+	 * 查找数据，根据索引来查
+	 * @param index
+	 * @return
+	 */
+	public long get(int index) {
+		if (index >= elements || index < 0) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		else {
+			return arr[index];
+		}
+	}
+	
+	/**
+	 * 删除数据
+	 * @param index
+	 */
 	public void delete(int index) {
 		if(index >= elements || index < 0) {
 			throw new ArrayIndexOutOfBoundsException();
@@ -86,6 +122,11 @@ public class MyOrderArray {
 		}
 	}
 	
+	/**
+	 * 更新数据
+	 * @param index
+	 * @param newValue
+	 */
 	public void change(int index, int newValue) {
 		if(index >= elements || index < 0) {
 			throw new ArrayIndexOutOfBoundsException();

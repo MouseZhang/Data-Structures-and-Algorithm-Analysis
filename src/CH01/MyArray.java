@@ -2,6 +2,7 @@ package CH01;
 
 public class MyArray {
 	private long[] arr;
+	//表示有效数据的长度
 	private int elements;
 	
 	public MyArray() {
@@ -12,11 +13,18 @@ public class MyArray {
 		arr = new long[maxSize];
 	}
 	
+	/**
+	 * 添加数据
+	 * @param value
+	 */
 	public void insert(long value) {
 		arr[elements] = value;
 		elements++;
 	}
 	
+	/**
+	 * 显示数据
+	 */
 	public void display() {
 		System.out.print("[");
 		for (int i = 0; i < elements; i++) {
@@ -25,6 +33,11 @@ public class MyArray {
 		System.out.println("]");
 	}
 	
+	/**
+	 * 查找数据
+	 * @param value
+	 * @return
+	 */
 	public int search(long value) {
 		int i;
 		for (i = 0; i < elements; i++) {
@@ -41,6 +54,11 @@ public class MyArray {
 		}
 	}
 	
+	/**
+	 * 查找数据，根据索引来查
+	 * @param index
+	 * @return
+	 */
 	public long get(int index) {
 		if (index >= elements || index < 0) {
 			throw new ArrayIndexOutOfBoundsException();
@@ -50,6 +68,10 @@ public class MyArray {
 		}
 	}
 	
+	/**
+	 * 删除数据
+	 * @param index
+	 */
 	public void delete(int index) {
 		if (index >= elements || index < 0) {
 			throw new ArrayIndexOutOfBoundsException();
@@ -62,6 +84,11 @@ public class MyArray {
 		}
 	}
 
+	/**
+	 * 更新数据
+	 * @param index
+	 * @param newValue
+	 */
 	public void change(int index, int newValue) {
 		if (index >= elements || index < 0) {
 			throw new ArrayIndexOutOfBoundsException();
