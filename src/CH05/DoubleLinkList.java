@@ -1,7 +1,13 @@
 package CH05;
-
+/**
+ * 双向链表
+ * @author MouseZhang
+ *
+ */
 public class DoubleLinkList {
+	//头结点
 	private Node first;
+	//尾结点
 	private Node last;
 	
 	public DoubleLinkList() {
@@ -9,6 +15,10 @@ public class DoubleLinkList {
 		last = null;
 	}
 	
+	/**
+	 * 插入一个结点，在头结点后进行插入
+	 * @param value
+	 */
 	public void insertFirst(long value) {
 		Node node = new Node(value);
 		if (isEmpty())
@@ -19,6 +29,10 @@ public class DoubleLinkList {
 		first = node;
 	}
 	
+	/**
+	 * 插入一个结点，从尾结点进行插入
+	 * @param value
+	 */
 	public void insertLast(long value) {
 		Node node = new Node(value);
 		if (isEmpty())
@@ -30,6 +44,10 @@ public class DoubleLinkList {
 		last = node;
 	}
 	
+	/**
+	 * 删除一个结点，在头结点后进行删除
+	 * @return
+	 */
 	public Node deleteFirst() {
 		Node temp = first;
 		if (first.next == null)
@@ -40,6 +58,10 @@ public class DoubleLinkList {
 		return temp;
 	}
 	
+	/**
+	 * 删除结点，从尾部进行删除
+	 * @return
+	 */
 	public Node deleteLast() {
 		Node temp = last;
 		if (first.next == null) 
@@ -50,6 +72,9 @@ public class DoubleLinkList {
 		return last;
 	}
 	
+	/**
+	 * 显示方法
+	 */
 	public void display() {
 		Node current = first;
 		while (current != null) {
@@ -59,6 +84,11 @@ public class DoubleLinkList {
 		System.out.println();
 	}
 	
+	/**
+	 * 查找方法
+	 * @param value
+	 * @return
+	 */
 	public Node find(long value) {
 		Node current = first;
 		while (current.data != value) {
@@ -69,6 +99,11 @@ public class DoubleLinkList {
 		return current;
 	}
 	
+	/**
+	 * 删除方法，根据数据域来进行删除
+	 * @param value
+	 * @return
+	 */
 	public Node delete(long value) {
 		Node current = first;
 		while (current.data != value) {
@@ -83,7 +118,10 @@ public class DoubleLinkList {
 		return current;
 	}
 	
-	
+	/**
+	 * 判断是否为空
+	 * @return
+	 */
 	public boolean isEmpty() {
 		return (first == null);
 	}
