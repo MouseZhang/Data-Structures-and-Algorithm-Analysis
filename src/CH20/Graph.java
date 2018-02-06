@@ -1,5 +1,6 @@
 package CH20;
 import CH03.MyStack;
+import CH03.MyQueue;
 /**
  * 图
  * @author MouseZhang
@@ -16,6 +17,8 @@ public class Graph {
 	private int nVertex;
 	//栈
 	private MyStack stack;
+	//队列
+	private MyQueue queue;
 	
 	public Graph() {
 		vertexList = new Vertex[maxSize];
@@ -27,6 +30,7 @@ public class Graph {
 		}
 		nVertex = 0;
 		stack = new MyStack();
+		queue = new MyQueue();
 	}
 	
 	/**
@@ -74,6 +78,35 @@ public class Graph {
 				vertexList[v].wasVisited = true;
 				displayVertex(v);
 				stack.push(v);
+			}
+		}
+		//搜索完以后，要将访问信息修改
+		for (int i = 0; i < nVertex; i++) {
+			vertexList[i].wasVisited = false;
+		}
+	}
+	
+	/**
+	 * 广度优先搜索
+	 */
+	public void bfs() {
+		//首先访问0号顶点
+		vertexList[0].wasVisited = true;
+		//显示该顶点
+		displayVertex(0);
+		//插入队列中
+		queue.insert(0);
+		while (!queue.isEmpty()) {
+			//获得一个未访问过的邻接点
+			int v = getadjUnvisitedVertex((int)queue.peek());
+			if (v == -1) {
+				//删除一个顶点
+				queue.remove();
+			}
+			else {
+				vertexList[v].wasVisited = true;
+				displayVertex(v);
+				queue.insert(v);
 			}
 		}
 		//搜索完以后，要将访问信息修改
