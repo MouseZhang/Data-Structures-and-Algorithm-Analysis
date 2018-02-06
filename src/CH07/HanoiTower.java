@@ -2,10 +2,10 @@ package CH07;
 
 public class HanoiTower {
 	/**
-	 *  topN: 移动的盘子数
-	 *  from: 起始塔座
-	 *  inter: 中间塔座
-	 *  to: 目标塔座
+	 * topN: 移动的盘子数
+	 * from: 起始塔座
+	 * inter: 中间塔座
+	 * to: 目标塔座
 	 */
 	public static void doTower(int topN, char from, char inter, char to) {
 		if (topN == 1)
