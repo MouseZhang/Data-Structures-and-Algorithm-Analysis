@@ -9,8 +9,9 @@ public class QuickSort {
 		int leftPtr = left - 1;
 		int rightPtr = right;
 		while (true) {
-			// 循环，将比关键字小的留在左端
+			//循环，将比关键字小的留在左端
 			while (leftPtr < rightPtr && arr[++leftPtr] < point);
+			//循环，将比关键字大的留在右端
 			while (rightPtr > leftPtr && arr[--rightPtr] > point);
 			if (leftPtr >= rightPtr)
 				break;
@@ -20,7 +21,7 @@ public class QuickSort {
 				arr[rightPtr] = temp;
 			}
 		}
-		// 将关键字与当前leftPtr所指的这一个进行交换
+		//将关键字与当前leftPtr所指的这一个进行交换
 		long temp = arr[leftPtr];
 		arr[leftPtr] = arr[right];
 		arr[right] = temp;
