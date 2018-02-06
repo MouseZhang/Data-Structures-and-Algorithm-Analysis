@@ -5,9 +5,13 @@ package CH11;
  *
  */
 public class Node {
+	//数据项
 	public long data;
+	//数据项
 	public String sData;
+	//左子节点
 	public Node leftChild;
+	//右子节点
 	public Node rightChild;
 	
 	/**

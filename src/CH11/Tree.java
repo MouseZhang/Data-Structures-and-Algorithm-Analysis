@@ -5,7 +5,7 @@ package CH11;
  *
  */
 public class Tree {
-	// 根节点
+	//根节点
 	public Node root;
 
 	/**
