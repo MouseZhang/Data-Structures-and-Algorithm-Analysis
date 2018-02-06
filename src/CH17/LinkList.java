@@ -1,25 +1,42 @@
 package CH17;
-
+/**
+ * 链表
+ * @author MouseZhang
+ *
+ */
 public class LinkList {
+	//头结点
 	private Node first;
 	
 	public LinkList() {
 		first = null;
 	}
 	
+	/**
+	 * 插入一个结点，在头结点后进行插入
+	 * @param info
+	 */
 	public void insertFirst(Info info) {
 		Node node = new Node(info);
 		node.next = first;						//最后插入的放在链表的头部
 		first = node;							//新插入的结点设为头结点
 	}
 	
+	/**
+	 * 删除一个结点，在头结点后进行删除
+	 * @return
+	 */
 	public Node deleteFirst() {
 		Node temp = first;
 		first = temp.next;
 		return temp;
 	}
 	
-	
+	/**
+	 * 查找方法
+	 * @param key
+	 * @return
+	 */
 	public Node find(String key) {
 		Node current = first;
 		while (!key.equals(current.info.getKey())) {
@@ -31,6 +48,11 @@ public class LinkList {
 		return current;
 	}
 
+	/**
+	 * 删除方法，根据数据域来进行删除
+	 * @param key
+	 * @return
+	 */
 	public Node delete(String key) {
 		Node current = first;
 		Node previous = first;
